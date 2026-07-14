@@ -46,3 +46,16 @@ fsdl-practical-assignments/
 - JavaScript
 - Git
 - GitHub
+
+---
+
+## Hosted Personal Profile Website
+
+**Live Website:**  
+https://fsdl-practical-assignments.vercel.app/
+
+---
+
+## GitHub Repository
+
+https://github.com/kxlyani/fsdl-practical-assignments
