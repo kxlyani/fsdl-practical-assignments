@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=DM+Sans:wght@400;500&amp;family=Cinzel:wght@700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#dfe2f4",
+                    "tertiary": "#fed282",
+                    "tertiary-container": "#e0b76a",
+                    "on-error": "#690005",
+                    "surface-container-high": "#262a37",
+                    "on-secondary-fixed-variant": "#4f319c",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1b1f2c",
+                    "on-primary-container": "#00564d",
+                    "surface-tint": "#69d9c8",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "on-primary-fixed": "#00201c",
+                    "primary-fixed": "#86f6e4",
+                    "secondary-container": "#4f319c",
+                    "primary-container": "#5ecfbe",
+                    "surface-container-lowest": "#0a0e1a",
+                    "outline": "#869390",
+                    "on-primary": "#003731",
+                    "on-surface-variant": "#bcc9c5",
+                    "inverse-surface": "#dfe2f4",
+                    "background": "#0f131f",
+                    "on-tertiary-container": "#644700",
+                    "surface-dim": "#0f131f",
+                    "on-secondary-fixed": "#21005e",
+                    "tertiary-fixed": "#ffdea6",
+                    "on-secondary": "#381385",
+                    "primary": "#7cebda",
+                    "inverse-on-surface": "#2c303d",
+                    "on-tertiary": "#412d00",
+                    "surface-variant": "#303442",
+                    "tertiary-fixed-dim": "#ebc072",
+                    "on-tertiary-fixed": "#271900",
+                    "surface": "#0f131f",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#bea8ff",
+                    "surface-container-low": "#171b28",
+                    "on-background": "#dfe2f4",
+                    "secondary": "#cebdff",
+                    "surface-container-highest": "#303442",
+                    "secondary-fixed": "#e8ddff",
+                    "outline-variant": "#3d4946",
+                    "on-primary-fixed-variant": "#005047",
+                    "inverse-primary": "#006b5f",
+                    "secondary-fixed-dim": "#cebdff",
+                    "primary-fixed-dim": "#69d9c8",
+                    "surface-bright": "#353946"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Cormorant Garamond"],
+                    "body": ["DM Sans"],
+                    "label": ["Cinzel"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32 overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-transparent text-[#5ECFBE] font-['Cormorant_Garamond'] text-2xl tracking-tight text-[#EEF0FA] w-full top-0 z-50 flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-80 transition-opacity" data-icon="arrow_back">arrow_back</span>
+<span class="font-['Cinzel'] text-xl tracking-widest text-[#5ECFBE]">Solace</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full text-xs font-label text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+                Mix Mode
+                <div class="w-8 h-4 bg-tertiary/20 rounded-full relative cursor-pointer">
+<div class="absolute right-0.5 top-0.5 w-3 h-3 bg-tertiary rounded-full"></div>
+</div>
+</div>
+</div>
+</header>
+<main class="px-6 space-y-8 mt-4">
+<!-- Search & Filters -->
+<section class="space-y-6">
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full h-14 pl-12 pr-6 rounded-2xl glass-card border-none focus:ring-1 focus:ring-primary/30 text-on-surface placeholder:text-on-surface-variant/50 transition-all" placeholder="Find your frequency..." type="text"/>
+</div>
+<div class="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+<button class="px-5 py-2 rounded-full glass-card text-primary font-label text-xs tracking-wider border border-primary/20 shadow-[0_0_15px_rgba(94,207,190,0.2)] whitespace-nowrap">Nature</button>
+<button class="px-5 py-2 rounded-full glass-card text-on-surface-variant font-label text-xs tracking-wider hover:text-primary transition-colors whitespace-nowrap">White Noise</button>
+<button class="px-5 py-2 rounded-full glass-card text-on-surface-variant font-label text-xs tracking-wider hover:text-primary transition-colors whitespace-nowrap">Ambient</button>
+<button class="px-5 py-2 rounded-full glass-card text-on-surface-variant font-label text-xs tracking-wider hover:text-primary transition-colors whitespace-nowrap">Celestial</button>
+<button class="px-5 py-2 rounded-full glass-card text-on-surface-variant font-label text-xs tracking-wider hover:text-primary transition-colors whitespace-nowrap">Focus</button>
+</div>
+</section>
+<!-- Featured Section: Staff Picks -->
+<section class="space-y-4">
+<div class="flex justify-between items-end">
+<h2 class="font-headline text-3xl text-on-surface leading-tight">Staff Picks</h2>
+<span class="font-label text-[10px] tracking-widest text-primary cursor-pointer hover:opacity-70">VIEW ALL</span>
+</div>
+<div class="flex gap-4 overflow-x-auto no-scrollbar -mx-6 px-6">
+<!-- Large Featured Card 1 -->
+<div class="min-w-[280px] h-[180px] rounded-lg relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="misty deep forest with tall pine trees and soft cinematic morning sunlight filtering through the fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5dUK6B_zRJbiGmZ-AEpRd2U4DhFmaCiPCXstMi_kHA-bQKiPk0PWMmWwn5z16YSjuM20MYQz_4AzkWe7k1pidf8fWDABj6qPt4ZqVsczM2ivN9Z4mK0N4KkQ2rQpDQOX45tgtGDf3WZrjrAfcTa5cYJ5lHctZzwpg6MuqbXhx5VvfN3wtLKW_ZYDJus7Sxu5XW3539D26z9PrWipX4eOzCTSV6agMxkwHHX0AiznzclgHz_KsVD4tswS63PBzGqjAwg6bxHXktRo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full">
+<p class="font-label text-[10px] text-tertiary mb-1">ATMOSPHERIC</p>
+<h3 class="font-headline text-xl text-on-surface">Midnight Forest</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary text-lg">play_circle</span>
+<span class="text-xs text-on-surface-variant">24 min • Immersive</span>
+</div>
+</div>
+</div>
+<!-- Large Featured Card 2 -->
+<div class="min-w-[280px] h-[180px] rounded-lg relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="abstract cosmic scene with swirling blue and purple nebulas and soft glowing distant stars in deep space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSV6EAqRnOsBUkpuwfmWNwjLGYSrOrJT0Fn7K8bFJEY8Gil4W2mP0Xx-oCBsJ7ytU2sM5p46cYxIW_DmkCOV5y5GKxtrWUZHZNyBMFbo_eIDJEo79s_eQ1Yi5CAqg7QMfXUbqjxH2zmOLQvuV04knOAehSzxsCYrk93jSMmGtitkcb5slSJUnoKJSGhD5ayyl1odx_8ZKRHnWS96JaU_D9PGAnRdZrCzP-asBqNlv3HG3MyUNp_6yBySqHEi6xJP-6KzORfLst3_k"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-5 w-full">
+<p class="font-label text-[10px] text-secondary mb-1">CELESTIAL</p>
+<h3 class="font-headline text-xl text-on-surface">Andromeda Drift</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="material-symbols-outlined text-primary text-lg">play_circle</span>
+<span class="text-xs text-on-surface-variant">45 min • Binaural</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Library Grid -->
+<section class="space-y-4">
+<h2 class="font-headline text-3xl text-on-surface">Explore Library</h2>
+<div class="grid grid-cols-2 gap-4"><!-- Upload Card -->
+<div class="glass-card rounded-lg p-3 space-y-3 relative group overflow-hidden border-2 border-dashed border-primary/30 hover:border-primary/60 transition-colors cursor-pointer flex flex-col">
+<div class="aspect-square rounded-lg bg-primary/5 flex items-center justify-center border border-primary/10">
+<div class="flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">upload_file</span>
+<span class="font-label text-[10px] text-primary tracking-widest">ADD NEW</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-lg leading-tight text-primary">My Uploads</h4>
+<p class="font-label text-[9px] text-on-surface-variant tracking-widest uppercase text-primary/60">PERSONAL FILES</p>
+</div>
+</div>
+<!-- Sound Card 1 -->
+<div class="glass-card rounded-lg p-3 space-y-3 relative group overflow-hidden">
+<div class="aspect-square rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="calm turquoise lake reflecting snow-capped mountains under a soft lilac sky at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBjAegCDNE3EqXbPPZqqZL4lgPp2SFv0BtR-mGBq6aEsluAA3S8CfPPpJ94q8xzPoel-nrakEEgdwSCRLJAtwryZS3aZMJpWAqEEo9BQP7C0vD64J9mce4vv4YXVOSpoy-KzgUkRBqtGpW1SpcZny35cFDz9gpdbs8SDtccD3iVZsx5Is56ETMeWr9_XVgnIif6xx-gZzyzvb9DSO0vGCh12U5NDP50SdbFy1QG3O7J4BqhWA7H5P-9zxFnHG0Dsoteh1iYUPC4JI"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-lg leading-tight">Rainy Terrace</h4>
+<p class="font-label text-[9px] text-on-surface-variant tracking-widest uppercase">NATURE • 15 MIN</p>
+</div>
+</div>
+<!-- Sound Card 2 -->
+<div class="glass-card rounded-lg p-3 space-y-3 relative group overflow-hidden">
+<div class="aspect-square rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="gentle ocean waves washing over smooth sandy beach with golden sunlight reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHXadw3JbiqhtpW_rDkTEI5nnl317QF9z6iK4dDfD7lwZ_sdgeSujaHWOTNrdWn_29BFBkMN1u1p3eufvABTXGv_EsAGuKsNF9xeB544k_oUu0dixbvGCfvAuSBLaqcwrIaezs8cezp8iM9i8oXyaZi9PdxZ4K22BmIoj9IGpr6x__9j1TNBi235QrjocoofsRjrkcADFwooQoN20OyP9BpylkslkmJNGnBSWrBujhSKukFwk4loQqCwj720oTbn6mS-CkNmvO2Pg"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-lg leading-tight">Pacific Pulse</h4>
+<p class="font-label text-[9px] text-on-surface-variant tracking-widest uppercase">WATER • 60 MIN</p>
+</div>
+</div>
+<!-- Sound Card 3 -->
+<div class="glass-card rounded-lg p-3 space-y-3 relative group overflow-hidden">
+<div class="aspect-square rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="close up of soft glowing embers in a dying campfire with faint wisps of smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Ny0Az6_rMEXS7FeaUpV6F3LnfbFecjmINYcjQgR-fnaR6i8RmlFZ4MJAmJI1FIv8G-D5KbWQZWKb99GEuc-hxFezRvvsTpNFB9Z1-bDf5a4bJSOKUCJlmrJY_hLGo06PfJqTcDev_yowBNRjMWvNSbEfzNXetqHCDEpFjpyY-XezcK56K56f3MVWZTBht8ZZXPf25ju5o5xZTDbTtGb8EmScpDzQidh27CPrE5-e_8Sx_HIKT_aMYF4z6595e0Pl8dPKWy44BfI"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-lg leading-tight">Hearth Glow</h4>
+<p class="font-label text-[9px] text-on-surface-variant tracking-widest uppercase">WHITE NOISE • 30 MIN</p>
+</div>
+</div>
+<!-- Sound Card 4 -->
+<div class="glass-card rounded-lg p-3 space-y-3 relative group overflow-hidden">
+<div class="aspect-square rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="serene view of the night sky with milky way galaxy and soft purple glowing mountain horizon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF1GXCM_h6lnqhvNGHrVp25SntByvBug3L6tsyrVWIdw1dQbszpqAfeoBtMZObzm69h18_boL94VQ_RqFH14wXwmZFFO0KWxVHHvQsxxHbb-8nlGIzPxbBZya2nFlpwi403i43C_Zml0kLip6YoSAkF92umsZkoYorGkqNoNz-m2Qa40JMXV-78nSJYRAmySqMqIt5y3--TesMucGXXk_CtaZ_bo_teXjdIpzTle5598dOOUXE7A11ep4pIhRFGy6RaTcR45e9IwY"/>
+<div class="absolute inset-0 flex items-center justify-center bg-background/20 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div>
+<h4 class="font-headline text-lg leading-tight">Luna Dream</h4>
+<p class="font-label text-[9px] text-on-surface-variant tracking-widest uppercase">AMBIENT • 120 MIN</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-4 pb-safe bg-white/5 backdrop-blur-xl rounded-t-[28px] border-t border-white/10 shadow-[0_-4px_40px_rgba(94,207,190,0.08)]">
+<a class="flex flex-col items-center justify-center text-[#D4D8E8]/60 hover:text-[#5ECFBE] transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Cinzel'] text-[10px] tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5ECFBE] drop-shadow-[0_0_8px_rgba(94,207,190,0.5)]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">subscriptions</span>
+<span class="font-['Cinzel'] text-[10px] tracking-wider">Library</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#D4D8E8]/60 hover:text-[#5ECFBE] transition-all" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-['Cinzel'] text-[10px] tracking-wider">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#D4D8E8]/60 hover:text-[#5ECFBE] transition-all" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Cinzel'] text-[10px] tracking-wider">Settings</span>
+</a>
+</nav>
+</body></html>

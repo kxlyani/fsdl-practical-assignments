@@ -1,0 +1,44 @@
+/* App-level overrides */
+
+/* Range input styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-surface-container-highest);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(113, 215, 205, 0.3);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  cursor: pointer;
+  border: none;
+}
+
+/* Smooth page transitions */
+.min-h-screen {
+  min-height: 100dvh;
+}
+
+/* Remove tap highlight on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Placeholder color */
+::placeholder {
+  color: var(--color-on-surface-variant);
+  opacity: 0.4;
+}
